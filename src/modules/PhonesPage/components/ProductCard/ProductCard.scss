@@ -6,7 +6,8 @@
     margin-bottom: 16px;
     margin-top: auto;
     transition: transform 0.3s ease;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 
     img {
       display: block;
