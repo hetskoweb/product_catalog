@@ -59,17 +59,20 @@ export const Products: React.FC<Props> = ({ products, sortBy }) => {
   );
 
   const setCurrentPage = (page: number) => {
-    setSearchParams({
-      page: page.toString(),
-      perpage: itemsPerPage.toString(),
-    });
+    const newParams = new URLSearchParams(searchParams);
+
+    newParams.set('page', page.toString());
+    newParams.set('perpage', itemsPerPage.toString());
+    setSearchParams(newParams);
   };
 
   const handlePerPageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSearchParams({
-      page: '1',
-      perpage: e.target.value,
-    });
+    const newPerPage = e.target.value;
+    const newParams = new URLSearchParams(searchParams);
+
+    newParams.set('perpage', newPerPage);
+
+    setSearchParams(newParams);
   };
 
   return (
