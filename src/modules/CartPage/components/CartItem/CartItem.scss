@@ -1,4 +1,4 @@
-@import './../../../../mixins';
+@use './../../../../mixins';
 
 .cart {
 
@@ -10,7 +10,7 @@
     align-items: center;
     flex-wrap: wrap;
 
-    @include on-tablet {
+    @include mixins.on-tablet {
       gap: 24px;
       padding: 24px;
       height: 128px;

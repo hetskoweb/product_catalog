@@ -1,4 +1,4 @@
-@import './../../../../mixins';
+@use './../../../../mixins';
 
 .products {
   margin-top: 40px;
@@ -42,7 +42,7 @@
       outline: none;
     }
 
-    @include on-tablet {
+    @include mixins.on-tablet {
       width: 176px;
     }
   }
@@ -70,7 +70,7 @@
 
     &:last-child {
       .products__select {
-        @include on-tablet {
+        @include mixins.on-tablet {
           width: 128px;
         }
       }

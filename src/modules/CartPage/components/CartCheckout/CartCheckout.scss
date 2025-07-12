@@ -1,4 +1,4 @@
-@import './../../../../mixins';
+@use './../../../../mixins';
 
 .cart {
 
@@ -12,7 +12,7 @@
     height: 100%;
     box-sizing: border-box;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       width: 32%;
     }
   }

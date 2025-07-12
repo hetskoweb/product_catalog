@@ -1,4 +1,4 @@
-@import './../../../../mixins';
+@use './../../../../mixins';
 
 .product-details {
 
@@ -8,11 +8,11 @@
     gap: 16px;
     margin-top: 40px;
 
-    @include on-tablet {
+    @include mixins.on-tablet {
       flex-direction: row;
     }
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       gap: 64px;
     }
   }
@@ -20,7 +20,7 @@
   .product-details__col:nth-child(1) {
     width: 100%;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       width: 52.31%;
     }
   }
@@ -28,7 +28,7 @@
   .product-details__col:nth-child(2) {
     width: 100%;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       width: 30.77%;
     }
   }
@@ -36,7 +36,7 @@
   .product-details__col:nth-child(3) {
     width: 0;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       width: 16.92%;
     }
   }
@@ -48,7 +48,7 @@
     flex-direction: column-reverse;
     margin-bottom: 40px;
 
-    @include on-tablet {
+    @include mixins.on-tablet {
       flex-direction: row;
       margin-bottom: 0;
     }
@@ -59,7 +59,7 @@
     flex-direction: row;
     gap: 16px;
 
-    @include on-tablet {
+    @include mixins.on-tablet {
       flex-direction: column;
     }
 
@@ -70,7 +70,7 @@
       border: 1px solid #3B3E4A;
       cursor: pointer;
 
-      @include on-dekstop {
+      @include mixins.on-dekstop {
         width: 80px;
         height: 80px;
       }
@@ -84,7 +84,7 @@
       height: 287px;
       object-fit: contain;
 
-      @include on-dekstop {
+      @include mixins.on-dekstop {
         width: 464px;
         height: 464px;
       }
@@ -204,7 +204,7 @@
       background-color: #A378FF;
     }
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       width: 263px;
     }
   }
@@ -277,7 +277,7 @@
     &--mobile {
       display: block;
 
-      @include on-dekstop {
+      @include mixins.on-dekstop {
         display: none;
       }
     }
@@ -285,7 +285,7 @@
     &--dekstop {
       display: none;
 
-      @include on-dekstop {
+      @include mixins.on-dekstop {
         display: block;
       }
     }
@@ -297,7 +297,7 @@
     flex-direction: column;
     gap: 64px;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       flex-direction: row;
     }
   }
@@ -305,7 +305,7 @@
   &__about {
     width: 100%;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       width: 50%;
     }
   }
@@ -340,7 +340,7 @@
   &__tech {
     width: 100%;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       width: 50%;
     }
   }

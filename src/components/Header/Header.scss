@@ -1,4 +1,4 @@
-@import './../../mixins';
+@use './../../mixins';
 
 .header {
   position: sticky;
@@ -13,11 +13,11 @@
   margin-bottom: 56px;
   box-sizing: border-box;
 
-  @include on-tablet {
+  @include mixins.on-tablet {
     height: 48px;
   }
 
-  @include on-dekstop {
+  @include mixins.on-dekstop {
     height: 64px;
     padding-left: 24px;
   }
@@ -25,7 +25,7 @@
   &__dekstop-logo {
     display: none;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       display: block;
     }
   }
@@ -33,7 +33,7 @@
   &__mobile-logo {
     display: block;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       display: none;
     }
   }
@@ -44,7 +44,7 @@
     gap: 32px;
     height: 100%;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       gap: 48px;
     }
   }
@@ -60,11 +60,11 @@
     padding: 16px;
     display: none;
 
-    @include on-tablet {
+    @include mixins.on-tablet {
       display: flex;
     }
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       padding: 24px;
     }
 
@@ -93,7 +93,7 @@
   &__menu-icon {
     display: flex;
 
-    @include on-tablet {
+    @include mixins.on-tablet {
       display: none;
     }
   }

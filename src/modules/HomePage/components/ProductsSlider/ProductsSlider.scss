@@ -1,4 +1,4 @@
-@import './../../../../mixins';
+@use './../../../../mixins';
 
 .products-slider {
   position: relative;
@@ -7,7 +7,7 @@
   .swiper-slide {
     width: auto;
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       width: 100%;
     }
   }

@@ -1,6 +1,6 @@
 // not empty
-@import './fonts';
-@import './mixins';
+@use './fonts';
+@use './mixins' as mixins;
 
 /* stylelint-disable-next-line selector-max-id */
 #root {
@@ -41,7 +41,7 @@ body {
   letter-spacing: -0.01em;
   margin: 0;
 
-  @include on-tablet {
+  @include mixins.on-tablet {
     font-size: 48px;
     line-height: 1.16;
   }
@@ -63,7 +63,7 @@ body {
   line-height: 1.4;
   margin: 0;
 
-  @include on-tablet {
+  @include mixins.on-tablet {
     font-size: 32px;
     letter-spacing: 0;
     line-height: 1.28;

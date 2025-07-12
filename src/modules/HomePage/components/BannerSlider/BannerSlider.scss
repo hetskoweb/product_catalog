@@ -1,4 +1,4 @@
-@import './../../../../mixins';
+@use './../../../../mixins';
 
 .banner {
   margin-top: 56px;
@@ -6,7 +6,7 @@
   margin-left: -24px;
   margin-right: -24px;
 
-  @include on-tablet {
+  @include mixins.on-tablet {
     margin-left: initial;
     margin-right: initial;
   }
@@ -24,11 +24,11 @@
       object-fit: cover;
       margin: 0 auto;
 
-      @include on-tablet {
+      @include mixins.on-tablet {
         height: 300px !important;
       }
 
-      @include on-dekstop {
+      @include mixins.on-dekstop {
         height: 400px !important;
       }
     }
@@ -38,11 +38,11 @@
 .banner .swiper {
   position: initial;
 
-  @include on-tablet {
+  @include mixins.on-tablet {
     width: calc(100% - 100px);
   }
 
-  @include on-dekstop {
+  @include mixins.on-dekstop {
     width: initial;
   }
 }
@@ -70,7 +70,7 @@
   left: 0;
   display: none;
 
-  @include on-tablet {
+  @include mixins.on-tablet {
     display: block;
   }
 
@@ -83,7 +83,7 @@
   right: 0;
   display: none;
 
-  @include on-tablet {
+  @include mixins.on-tablet {
     display: block;
   }
 

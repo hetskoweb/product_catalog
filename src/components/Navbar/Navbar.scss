@@ -1,4 +1,4 @@
-@import '../../mixins';
+@use '../../mixins';
 
 .navbar {
   height: 100%;
@@ -11,11 +11,11 @@
     display: none;
     gap: 32px;
 
-    @include on-tablet {
+    @include mixins.on-tablet {
       display: flex;
     }
 
-    @include on-dekstop {
+    @include mixins.on-dekstop {
       gap: 64px;
     }
   }

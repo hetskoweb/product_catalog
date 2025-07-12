@@ -1,4 +1,4 @@
-@import './../../mixins';
+@use './../../mixins';
 
 .cart {
   margin-top: 32px;
@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 16px;
 
-  @include on-dekstop {
+  @include mixins.on-dekstop {
     flex-direction: row;
   }
 }

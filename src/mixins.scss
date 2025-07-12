@@ -1,19 +1,19 @@
-@import './variables';
+@use './variables' as vars;
 
 @mixin on-phone {
-  @media (min-width: $phone-min-width) {
+  @media (min-width: vars.$phone-min-width) {
     @content;
   }
 }
 
 @mixin on-tablet {
-  @media (min-width: $tablet-min-width) {
+  @media (min-width: vars.$tablet-min-width) {
     @content;
   }
 }
 
 @mixin on-dekstop {
-  @media (min-width: $dekstop-min-width) {
+  @media (min-width: vars.$dekstop-min-width) {
     @content;
   }
 }
