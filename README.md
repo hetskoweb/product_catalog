@@ -1,11 +1,11 @@
 # Product Catalog — Your Ultimate Electronics Showcase
 Product Catalog is a modern, responsive website designed to showcase a wide range of electronic products, including phones, tablets, and accessories. Easily browse, sort, and explore detailed product information, add favorites, and manage your shopping cart. The clean and intuitive interface ensures a seamless browsing experience on both desktop and mobile devices.
 
-# Live demo
+## Live demo
 
 Experience the live website: [ProductCatalog Demo](https://hetskoweb.github.io/product_catalog/)
 
-# Technologies Used 💻
+## Technologies Used 💻
 
 **Core**
 * **React (v18.3.1)** - UI framework
@@ -21,7 +21,7 @@ Experience the live website: [ProductCatalog Demo](https://hetskoweb.github.io/p
 * **ESLint (v8.57.0)** - Code Quality
 * **Prettier (v3.3.2)** - Code Formatting
 
-# 🚀 Features
+## 🚀 Features
 
 - ⚛️ **Single Page Application (SPA)** — Built using `React Router` for smooth client-side navigation without full page reloads
 - 📱 **Responsive Design** — Fully responsive layout adapted for mobile, tablet, and desktop screens
@@ -42,7 +42,7 @@ Experience the live website: [ProductCatalog Demo](https://hetskoweb.github.io/p
 - 🧪 **TypeScript Support** — Fully typed with TypeScript for type safety and IDE autocompletion
 
 
-# Additional Setup Instructions
+## Additional Setup Instructions
 
 1. **Clone the repository:**
 ```bash
