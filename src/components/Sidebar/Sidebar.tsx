@@ -5,9 +5,14 @@ import './Sidebar.scss';
 
 type Props = {
   isOpen: boolean;
+  onClose: () => void;
 };
 
-export const Sidebar: React.FC<Props> = ({ isOpen }) => {
+export const Sidebar: React.FC<Props> = ({ isOpen, onClose }) => {
+  const handleLinkClick = () => {
+    onClose();
+  };
+
   return (
     <aside className={`sidebar ${isOpen ? 'sidebar--open' : ''}`}>
       <ul className="sidebar__list">
@@ -17,6 +22,7 @@ export const Sidebar: React.FC<Props> = ({ isOpen }) => {
             className={({ isActive }) =>
               isActive ? 'sidebar__link is-active' : 'sidebar__link'
             }
+            onClick={handleLinkClick}
           >
             Home
           </NavLink>
@@ -27,6 +33,7 @@ export const Sidebar: React.FC<Props> = ({ isOpen }) => {
             className={({ isActive }) =>
               isActive ? 'sidebar__link is-active' : 'sidebar__link'
             }
+            onClick={handleLinkClick}
           >
             Phones
           </NavLink>
@@ -37,6 +44,7 @@ export const Sidebar: React.FC<Props> = ({ isOpen }) => {
             className={({ isActive }) =>
               isActive ? 'sidebar__link is-active' : 'sidebar__link'
             }
+            onClick={handleLinkClick}
           >
             Tablets
           </NavLink>
@@ -47,6 +55,7 @@ export const Sidebar: React.FC<Props> = ({ isOpen }) => {
             className={({ isActive }) =>
               isActive ? 'sidebar__link is-active' : 'sidebar__link'
             }
+            onClick={handleLinkClick}
           >
             Accessories
           </NavLink>
@@ -58,6 +67,7 @@ export const Sidebar: React.FC<Props> = ({ isOpen }) => {
           className={({ isActive }) =>
             isActive ? 'sidebar__icon is-active' : 'sidebar__icon'
           }
+          onClick={handleLinkClick}
         >
           <img src={FavoriteIcon} alt="favorite-icon" />
         </NavLink>
@@ -66,6 +76,7 @@ export const Sidebar: React.FC<Props> = ({ isOpen }) => {
           className={({ isActive }) =>
             isActive ? 'sidebar__icon is-active' : 'sidebar__icon'
           }
+          onClick={handleLinkClick}
         >
           <img src={CartIcon} alt="cart-icon" />
         </NavLink>

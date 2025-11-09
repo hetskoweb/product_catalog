@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import './App.scss';
 import { HomePage } from './modules/HomePage';
 import { ProductsPage } from './modules/PhonesPage';
@@ -42,11 +42,26 @@ export const App = () => {
       });
   }, []);
 
+  useEffect(() => {
+    const body = document.body;
+
+    if (isSidebarOpen) {
+      body.classList.add('no-scroll');
+    } else {
+      body.classList.remove('no-scroll');
+    }
+
+    return () => body.classList.remove('no-scroll');
+  }, [isSidebarOpen]);
+
   return (
-    <div className={`app ${isSidebarOpen ? 'no-scroll' : ''}`}>
+    <div className="app">
       <Header onMenuClick={toggleSidebar} isOpen={isSidebarOpen} cart={cart} />
       <div className="app__body">
-        <Sidebar isOpen={isSidebarOpen} />
+        <Sidebar
+          isOpen={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
+        />
         <div className="app__content">
           <main className="main">
             <Routes>
